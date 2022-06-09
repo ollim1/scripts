@@ -1,5 +1,6 @@
 #!/bin/bash
 # adjusts brightnesses of all displays using ddccontrol
+# to use without root privileges, add for every /dev/i2c-* the line KERNEL=="i2c-[0-9]", SUBSYSTEM=="i2c-dev", GROUP=="ddc", MODE="0660" to /etc/udev/rules.d/ to /etc/udev/rules.d/98-ddc.rules
 
 displays=("dev:/dev/i2c-1" "dev:/dev/i2c-3")
 
